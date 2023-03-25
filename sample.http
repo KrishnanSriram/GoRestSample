@@ -1,0 +1,17 @@
+### Health
+GET http://localhost:8080/health
+
+### List Books
+GET http://localhost:8080/books
+
+### Find a book by Id
+GET http://localhost:8080/books/0e4e30a0-1b87-4bb0-937f-1c516bd4290c
+
+### Add a new book
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+  "title": "book 1",
+  "authors": ["author 1", "author 2", "author 3"]
+}
