@@ -12,6 +12,6 @@ POST http://localhost:8080/books
 Content-Type: application/json
 
 {
-  "title": "book 1",
-  "authors": ["author 1", "author 2", "author 3"]
+  "title": "title 1",
+  "author": ["author 1", "author 2", "author 3"]
 }

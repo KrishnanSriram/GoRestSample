@@ -25,6 +25,7 @@ func AddBookRoutes(router *gin.Engine) {
 				"module": "find book",
 				"data":   "No matching book found!!",
 			})
+			return
 		}
 		c.JSON(http.StatusOK, gin.H{
 			"module": "find book",
@@ -40,6 +41,7 @@ func AddBookRoutes(router *gin.Engine) {
 				"module": "Add new book",
 				"error":  err.Error(),
 			})
+			return
 		}
 		book, err := bookHandler.Add(bookReq)
 		if err != nil {
@@ -47,6 +49,7 @@ func AddBookRoutes(router *gin.Engine) {
 				"module": "Add new book",
 				"error":  err.Error(),
 			})
+			return
 		}
 		c.JSON(http.StatusCreated, gin.H{
 			"module": "Add new Book",
